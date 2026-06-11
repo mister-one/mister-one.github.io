@@ -1,24 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+
+:root {
+  --color-background: rgb(250, 249, 241);
+  --color-text: rgb(0, 0, 0);
+  --color-soft-black: rgb(22, 22, 22);
+  --color-lavender: rgb(228, 230, 252);
+  --color-chartreuse: rgb(234, 234, 173);
+}
+
 body {
   max-width: 760px;
   margin: 0 auto;
   padding: 24px;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
-  color: oklch(24% 0.012 75);
-  background: oklch(98.5% 0.008 80);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+h1 {
+  display: inline;
+  color: var(--color-soft-black);
+  background: var(--color-lavender);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 0 0.18em;
+}
+
+main p a {
+  color: var(--color-soft-black);
+  text-decoration-color: var(--color-soft-black);
+  text-underline-offset: 3px;
+  background: var(--color-lavender);
 }
 
 nav {
   display: flex;
   gap: 16px;
   margin-bottom: 32px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-chartreuse);
   padding-bottom: 12px;
 }
 
 nav a {
   text-decoration: none;
-  color: #222;
+  color: var(--color-soft-black);
   font-weight: 600;
 }
 
@@ -30,7 +56,7 @@ img {
 
 .article-date {
   margin-top: -12px;
-  color: #666;
+  color: var(--color-soft-black);
   font-size: 0.9rem;
 }
 
@@ -59,8 +85,8 @@ img {
   margin: 16px 7px;
   background: repeating-linear-gradient(
     to bottom,
-    oklch(71% 0.14 75) 0,
-    oklch(71% 0.14 75) 5px,
+    var(--color-chartreuse) 0,
+    var(--color-chartreuse) 5px,
     transparent 5px,
     transparent 9px
   );
@@ -73,8 +99,8 @@ img {
   left: -4px;
   width: 8px;
   height: 8px;
-  border-right: 2px solid oklch(62% 0.16 70);
-  border-bottom: 2px solid oklch(62% 0.16 70);
+  border-right: 2px solid var(--color-chartreuse);
+  border-bottom: 2px solid var(--color-chartreuse);
   transform: rotate(45deg);
 }
 
@@ -91,9 +117,9 @@ img {
   width: 12px;
   height: 12px;
   box-sizing: border-box;
-  border: 2px solid oklch(62% 0.16 70);
+  border: 2px solid var(--color-chartreuse);
   border-radius: 50%;
-  background: oklch(98.5% 0.008 80);
+  background: var(--color-chartreuse);
 }
 
 .timeline-direction strong,
@@ -102,12 +128,13 @@ img {
 }
 
 .timeline-direction strong {
+  color: var(--color-soft-black);
   font-size: 1.05rem;
   line-height: 1.2;
 }
 
 .timeline-direction span {
-  color: oklch(48% 0.018 75);
+  color: var(--color-soft-black);
   font-size: 0.75rem;
 }
 
@@ -120,13 +147,13 @@ img {
   align-items: baseline;
   gap: 8px;
   margin: 0 0 20px;
-  color: oklch(24% 0.012 75);
+  color: var(--color-soft-black);
   font-size: clamp(1.5rem, 4vw, 2rem);
   line-height: 1.1;
 }
 
 .timeline-group h2 span {
-  color: oklch(53% 0.02 75);
+  color: var(--color-soft-black);
   font-size: 0.65em;
   font-weight: 500;
 }
@@ -143,34 +170,41 @@ img {
   gap: 20px;
   align-items: baseline;
   padding: 18px 0;
-  border-top: 1px solid oklch(88% 0.012 75);
+  border-top: 1px solid var(--color-chartreuse);
 }
 
 .timeline-entry:last-child {
-  border-bottom: 1px solid oklch(88% 0.012 75);
+  border-bottom: 1px solid var(--color-chartreuse);
 }
 
 .timeline-entry time {
-  color: oklch(48% 0.018 75);
+  color: var(--color-soft-black);
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
 }
 
 .timeline-entry a {
-  color: oklch(24% 0.012 75);
-  font-size: clamp(1.05rem, 3vw, 1.2rem);
-  font-weight: 600;
-  text-decoration-color: oklch(71% 0.14 75);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  color: var(--color-soft-black);
+  font-family: "Titan One", "Arial Black", sans-serif;
+  font-size: clamp(1.15rem, 3.5vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  background: linear-gradient(
+    to top,
+    var(--color-lavender) 0,
+    var(--color-lavender) 58%,
+    transparent 58%
+  );
 }
 
 .timeline-entry a:hover {
-  color: oklch(44% 0.13 62);
+  color: var(--color-soft-black);
+  background: var(--color-lavender);
 }
 
 .timeline-entry a:focus-visible {
-  outline: 3px solid oklch(79% 0.13 80);
+  outline: 3px solid var(--color-chartreuse);
   outline-offset: 4px;
   border-radius: 2px;
 }
@@ -197,8 +231,8 @@ img {
     margin: 0 16px;
     background: repeating-linear-gradient(
       to right,
-      oklch(71% 0.14 75) 0,
-      oklch(71% 0.14 75) 5px,
+      var(--color-chartreuse) 0,
+      var(--color-chartreuse) 5px,
       transparent 5px,
       transparent 9px
     );
