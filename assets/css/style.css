@@ -4,6 +4,8 @@ body {
   padding: 24px;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
+  color: oklch(24% 0.012 75);
+  background: oklch(98.5% 0.008 80);
 }
 
 nav {
@@ -33,60 +35,203 @@ img {
 }
 
 .blog-timeline {
-  position: relative;
-  margin-top: 32px;
-  padding-left: 28px;
+  display: grid;
+  grid-template-columns: minmax(120px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(28px, 7vw, 72px);
+  margin-top: clamp(36px, 8vw, 72px);
+  min-height: 440px;
 }
 
-.blog-timeline::before {
+.timeline-rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.timeline-line {
+  position: relative;
+  flex: 1;
+  width: 2px;
+  min-height: 260px;
+  margin: 16px 7px;
+  background: repeating-linear-gradient(
+    to bottom,
+    oklch(71% 0.14 75) 0,
+    oklch(71% 0.14 75) 5px,
+    transparent 5px,
+    transparent 9px
+  );
+}
+
+.timeline-line::after {
   content: "";
   position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 5px;
-  width: 2px;
-  background: #ddd;
+  bottom: -2px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid oklch(62% 0.16 70);
+  border-bottom: 2px solid oklch(62% 0.16 70);
+  transform: rotate(45deg);
 }
 
-.timeline-entry {
+.timeline-direction {
   position: relative;
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 20px;
-  padding-bottom: 28px;
+  padding-right: 28px;
 }
 
-.timeline-entry::before {
+.timeline-direction::after {
   content: "";
   position: absolute;
   top: 7px;
-  left: -28px;
+  right: 0;
   width: 12px;
   height: 12px;
   box-sizing: border-box;
-  border: 3px solid #222;
+  border: 2px solid oklch(62% 0.16 70);
   border-radius: 50%;
-  background: #fff;
+  background: oklch(98.5% 0.008 80);
+}
+
+.timeline-direction strong,
+.timeline-direction span {
+  display: block;
+}
+
+.timeline-direction strong {
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.timeline-direction span {
+  color: oklch(48% 0.018 75);
+  font-size: 0.75rem;
+}
+
+.timeline-content {
+  padding-top: 2px;
+}
+
+.timeline-group h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 20px;
+  color: oklch(24% 0.012 75);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.1;
+}
+
+.timeline-group h2 span {
+  color: oklch(53% 0.02 75);
+  font-size: 0.65em;
+  font-weight: 500;
+}
+
+.timeline-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 20px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-top: 1px solid oklch(88% 0.012 75);
 }
 
 .timeline-entry:last-child {
-  padding-bottom: 0;
+  border-bottom: 1px solid oklch(88% 0.012 75);
 }
 
 .timeline-entry time {
-  color: #666;
-  font-size: 0.9rem;
+  color: oklch(48% 0.018 75);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .timeline-entry a {
-  color: #222;
-  font-size: 1.1rem;
+  color: oklch(24% 0.012 75);
+  font-size: clamp(1.05rem, 3vw, 1.2rem);
   font-weight: 600;
+  text-decoration-color: oklch(71% 0.14 75);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.timeline-entry a:hover {
+  color: oklch(44% 0.13 62);
+}
+
+.timeline-entry a:focus-visible {
+  outline: 3px solid oklch(79% 0.13 80);
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 @media (max-width: 520px) {
+  .blog-timeline {
+    display: block;
+    min-height: 0;
+    margin-top: 32px;
+  }
+
+  .timeline-rail {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 36px;
+    text-align: left;
+  }
+
+  .timeline-line {
+    flex: 1;
+    width: auto;
+    height: 2px;
+    min-height: 0;
+    margin: 0 16px;
+    background: repeating-linear-gradient(
+      to right,
+      oklch(71% 0.14 75) 0,
+      oklch(71% 0.14 75) 5px,
+      transparent 5px,
+      transparent 9px
+    );
+  }
+
+  .timeline-line::after {
+    right: -1px;
+    bottom: -4px;
+    left: auto;
+    transform: rotate(-45deg);
+  }
+
+  .timeline-direction {
+    padding: 22px 0 0;
+  }
+
+  .timeline-direction::after {
+    top: 0;
+    right: auto;
+    left: 0;
+  }
+
+  .timeline-direction-past {
+    text-align: right;
+  }
+
+  .timeline-direction-past::after {
+    right: 0;
+    left: auto;
+  }
+
   .timeline-entry {
-    grid-template-columns: 1fr;
-    gap: 2px;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 14px;
   }
 }
