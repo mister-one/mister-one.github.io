@@ -1,11 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
-
 :root {
   --color-background: rgb(250, 249, 241);
-  --color-text: rgb(0, 0, 0);
   --color-soft-black: rgb(22, 22, 22);
   --color-lavender: rgb(228, 230, 252);
-  --color-chartreuse: rgb(234, 234, 173);
 }
 
 body {
@@ -14,31 +10,25 @@ body {
   padding: 24px;
   font-family: system-ui, sans-serif;
   line-height: 1.6;
-  color: var(--color-text);
+  color: var(--color-soft-black);
   background: var(--color-background);
 }
 
 h1 {
-  display: inline;
   color: var(--color-soft-black);
-  background: var(--color-lavender);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  padding: 0 0.18em;
 }
 
 main p a {
   color: var(--color-soft-black);
   text-decoration-color: var(--color-soft-black);
   text-underline-offset: 3px;
-  background: var(--color-lavender);
 }
 
 nav {
   display: flex;
   gap: 16px;
   margin-bottom: 32px;
-  border-bottom: 1px solid var(--color-chartreuse);
+  border-bottom: 1px solid var(--color-soft-black);
   padding-bottom: 12px;
 }
 
@@ -85,8 +75,8 @@ img {
   margin: 16px 7px;
   background: repeating-linear-gradient(
     to bottom,
-    var(--color-chartreuse) 0,
-    var(--color-chartreuse) 5px,
+    var(--color-lavender) 0,
+    var(--color-lavender) 5px,
     transparent 5px,
     transparent 9px
   );
@@ -99,8 +89,8 @@ img {
   left: -4px;
   width: 8px;
   height: 8px;
-  border-right: 2px solid var(--color-chartreuse);
-  border-bottom: 2px solid var(--color-chartreuse);
+  border-right: 2px solid var(--color-lavender);
+  border-bottom: 2px solid var(--color-lavender);
   transform: rotate(45deg);
 }
 
@@ -117,9 +107,9 @@ img {
   width: 12px;
   height: 12px;
   box-sizing: border-box;
-  border: 2px solid var(--color-chartreuse);
+  border: 2px solid var(--color-lavender);
   border-radius: 50%;
-  background: var(--color-chartreuse);
+  background: var(--color-background);
 }
 
 .timeline-direction strong,
@@ -170,11 +160,11 @@ img {
   gap: 20px;
   align-items: baseline;
   padding: 18px 0;
-  border-top: 1px solid var(--color-chartreuse);
+  border-top: 1px solid var(--color-soft-black);
 }
 
 .timeline-entry:last-child {
-  border-bottom: 1px solid var(--color-chartreuse);
+  border-bottom: 1px solid var(--color-soft-black);
 }
 
 .timeline-entry time {
@@ -185,26 +175,20 @@ img {
 
 .timeline-entry a {
   color: var(--color-soft-black);
-  font-family: "Titan One", "Arial Black", sans-serif;
-  font-size: clamp(1.15rem, 3.5vw, 1.4rem);
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  background: linear-gradient(
-    to top,
-    var(--color-lavender) 0,
-    var(--color-lavender) 58%,
-    transparent 58%
-  );
+  font-family: inherit;
+  font-size: clamp(1.05rem, 3vw, 1.2rem);
+  font-weight: 600;
+  text-decoration-color: var(--color-soft-black);
+  text-underline-offset: 4px;
 }
 
 .timeline-entry a:hover {
   color: var(--color-soft-black);
-  background: var(--color-lavender);
+  text-decoration-thickness: 2px;
 }
 
 .timeline-entry a:focus-visible {
-  outline: 3px solid var(--color-chartreuse);
+  outline: 3px solid var(--color-lavender);
   outline-offset: 4px;
   border-radius: 2px;
 }
@@ -231,8 +215,8 @@ img {
     margin: 0 16px;
     background: repeating-linear-gradient(
       to right,
-      var(--color-chartreuse) 0,
-      var(--color-chartreuse) 5px,
+      var(--color-lavender) 0,
+      var(--color-lavender) 5px,
       transparent 5px,
       transparent 9px
     );

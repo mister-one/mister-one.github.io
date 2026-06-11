@@ -11,25 +11,21 @@ article titles and dates.
 
 - **Warm Ivory**: `rgb(250, 249, 241)`. Use as the global background on
   every page.
-- **True Black**: `rgb(0, 0, 0)`. Use for long-form paragraphs and primary
-  reading text.
 - **Soft Black**: `rgb(22, 22, 22)`. Use for navigation, dates, metadata,
-  labels, and other interface elements.
-- **Pale Lavender**: `rgb(228, 230, 252)`. Use as a background highlight for
-  page titles, article titles, and selected link treatments. Do not use it as
-  text on Warm Ivory because the contrast is insufficient.
-- **Soft Chartreuse**: `rgb(234, 234, 173)`. Use for timeline lines, endpoint
-  markers, separators, borders, and focus accents.
+  labels, headings, links, body copy, and other interface elements.
+- **Pale Lavender**: `rgb(228, 230, 252)`. Reserve for the timeline rail,
+  endpoint markers, directional arrow, and keyboard focus outlines. Do not use
+  it for text or broad highlights because its contrast on Warm Ivory is low.
 
-Use the colors by role rather than decoratively. All text and interactive states
-must meet WCAG AA contrast requirements.
+The active palette is Warm Ivory, Soft Black, and Pale Lavender. Do not use Soft
+Chartreuse. All text and interactive states must meet WCAG AA contrast
+requirements.
 
 ## Typography
 
-Use the existing system sans-serif stack for navigation, dates, and body copy.
-Article titles use Titan One, a chunky rounded display face that gives the archive
-a playful retro character. Create the remaining hierarchy through size, weight,
-spacing, and alignment.
+Use the native system sans-serif stack for all text, including article titles,
+navigation, dates, and body copy. Do not load an external web font. Create
+hierarchy through size, weight, spacing, and alignment.
 
 ## Layout
 
@@ -44,7 +40,7 @@ spacing, and alignment.
 ### Timeline rail
 
 A vertical line with endpoint markers and persistent Present and Past labels.
-The line, markers, and timeline borders use Soft Chartreuse. The labels use Soft
+The line, markers, and directional arrow use Pale Lavender. The labels use Soft
 Black and communicate reading direction without relying on color.
 
 ### Time group
@@ -54,9 +50,9 @@ publication date and an article link.
 
 ### Links
 
-Article links use Soft Black text with a Pale Lavender highlight. Navigation uses
-Soft Black. Hover and focus states should be visible without moving surrounding
-content.
+All links use Soft Black with conventional underlines. Pale Lavender is limited
+to focus outlines. Hover and focus states should be visible without moving
+surrounding content.
 
 ## Motion
 
