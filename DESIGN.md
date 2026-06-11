@@ -16,6 +16,8 @@ article titles and dates.
 - **Main Blue**: `rgb(104, 106, 168)`. Reserve for the timeline rail,
   endpoint markers, directional arrow, button hover shadows, and keyboard focus
   outlines. Do not use it for broad surface fills or resting button fills.
+- **Main Green**: `rgb(80, 110, 95)`
+
 
 The active palette is Warm Ivory, Soft Black, and Main Blue. All text and
 interactive states must meet WCAG AA contrast requirements.
@@ -30,7 +32,8 @@ hierarchy through size, weight, spacing, and alignment.
 
 - Keep the existing readable page width.
 - Use a two-column timeline on larger screens.
-- The left rail explains direction from Present to Past.
+- The left rail remains sticky and fills the available viewport height while
+  the page's article column scrolls.
 - The right column groups articles by month and year.
 - Collapse to a compact single-column chronology on narrow screens.
 
@@ -40,12 +43,21 @@ hierarchy through size, weight, spacing, and alignment.
 
 A vertical line with endpoint markers and persistent Present and Past labels.
 The line, markers, and directional arrow use Main Blue. The labels use Soft
-Black and communicate reading direction without relying on color.
+Black and communicate reading direction without relying on color. The Present
+marker is filled Main Blue; the Past marker is hollow. On desktop, the rail is
+sticky and sized to the viewport. On mobile, it becomes a horizontal guide.
 
 ### Time group
 
 A month-and-year heading followed by article rows. Each row contains a precise
-publication date and an article link.
+publication date, one or more categories, an article link, and a Read article
+button. Categories come from a YAML array in article front matter:
+
+```yaml
+categories:
+  - Technology
+  - Essays
+```
 
 ### Links
 
@@ -57,11 +69,14 @@ moving surrounding content.
 
 Every timeline entry includes a pill-shaped "Read article" link beside its title.
 The button is transparent at rest, with Soft Black text, a subtle white edge,
-inner light, and restrained backdrop blur. On hover, a Main Blue shadow appears
-below the button and the pill lifts slightly. Main Blue must not appear as a
-resting fill or border. The label must remain readable without depending on the
-glass effect.
+inner light, restrained backdrop blur, and a faint Main Blue shadow. On hover,
+the Main Blue shadow becomes darker and the pill lifts slightly; when hover ends,
+the shadow returns smoothly to its resting intensity. Main Blue must not appear
+as a resting fill or border. The label must remain readable without depending on
+the glass effect.
 
 ## Motion
 
-No motion is required. The chronology should be understandable in a static view.
+The chronology must remain understandable in a static view. Limit motion to the
+Read article button: a short ease-out lift, a deepening Main Blue shadow, and a
+small arrow shift. Respect the user's reduced-motion preference.

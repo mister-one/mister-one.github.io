@@ -3,6 +3,8 @@ layout: default
 title: Blog 1
 permalink: /blog/blog-1/
 date: 2026-06-11
+categories:
+  - Essays
 ---
 
 # Blog 1

@@ -47,6 +47,13 @@ permalink: /blog/
             {{ article.date | date: "%B %-d" }}
           </time>
           <div class="timeline-article">
+            {% if article.categories %}
+            <ul class="article-categories" aria-label="Categories">
+              {% for category in article.categories %}
+              <li>{{ category }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
             <a class="article-title" href="{{ article.url | relative_url }}">
               {{ article.title }}
             </a>
