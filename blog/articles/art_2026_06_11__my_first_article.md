@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Blog 1
-permalink: /blog/blog-1/
-date: 2026-06-11
+title: art_2026_06_11__my_first_article
+permalink: /blog/art_2026_06_11__my_first_article/
+date: 2026-06-12
 ---
 
 # Blog 1
