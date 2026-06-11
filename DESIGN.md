@@ -13,12 +13,11 @@ article titles and dates.
   every page.
 - **Soft Black**: `rgb(22, 22, 22)`. Use for navigation, dates, metadata,
   labels, headings, links, body copy, and other interface elements.
-- **Pale Lavender**: `rgb(228, 230, 252)`. Reserve for the timeline rail,
+- **Main Blue**: `rgb(0, 55, 162)`. Reserve for the timeline rail,
   endpoint markers, directional arrow, and keyboard focus outlines. Do not use
   it for text or broad highlights because its contrast on Warm Ivory is low.
 
-The active palette is Warm Ivory, Soft Black, and Pale Lavender. Do not use Soft
-Chartreuse. All text and interactive states must meet WCAG AA contrast
+The active palette is Warm Ivory, Soft Black, and Main Blue. All text and interactive states must meet WCAG AA contrast
 requirements.
 
 ## Typography
