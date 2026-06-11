@@ -14,11 +14,11 @@ article titles and dates.
 - **Soft Black**: `rgb(22, 22, 22)`. Use for navigation, dates, metadata,
   labels, headings, links, body copy, and other interface elements.
 - **Main Blue**: `rgb(0, 55, 162)`. Reserve for the timeline rail,
-  endpoint markers, directional arrow, and keyboard focus outlines. Do not use
-  it for text or broad highlights because its contrast on Warm Ivory is low.
+  endpoint markers, directional arrow, button borders, and keyboard focus
+  outlines. Do not use it for broad surface fills.
 
-The active palette is Warm Ivory, Soft Black, and Main Blue. All text and interactive states must meet WCAG AA contrast
-requirements.
+The active palette is Warm Ivory, Soft Black, and Main Blue. All text and
+interactive states must meet WCAG AA contrast requirements.
 
 ## Typography
 
@@ -39,7 +39,7 @@ hierarchy through size, weight, spacing, and alignment.
 ### Timeline rail
 
 A vertical line with endpoint markers and persistent Present and Past labels.
-The line, markers, and directional arrow use Pale Lavender. The labels use Soft
+The line, markers, and directional arrow use Main Blue. The labels use Soft
 Black and communicate reading direction without relying on color.
 
 ### Time group
@@ -49,9 +49,17 @@ publication date and an article link.
 
 ### Links
 
-All links use Soft Black with conventional underlines. Pale Lavender is limited
-to focus outlines. Hover and focus states should be visible without moving
-surrounding content.
+All text links use Soft Black with conventional underlines. Main Blue is used
+for keyboard focus outlines. Hover and focus states should be visible without
+moving surrounding content.
+
+### Read article button
+
+Every timeline entry includes a pill-shaped "Read article" link beside its title.
+The button uses translucent Warm Ivory, a partially transparent Main Blue border,
+Soft Black text, subtle inner light, and restrained backdrop blur. It may become
+more opaque on hover, but its label must remain readable without depending on
+the glass effect.
 
 ## Motion
 
