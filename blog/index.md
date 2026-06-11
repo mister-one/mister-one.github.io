@@ -37,7 +37,7 @@ permalink: /blog/
         </li>
         <li class="timeline-entry">
           <time datetime="2026-06-08">June 8</time>
-          <a href="{{ '/blog/my-first-article/' | relative_url }}">My First Article</a>
+          <a href="{{ '/blog/my-first-article/' | relative_url }}">My First Article My First Article This is a Markdown article inside the blog folder. This is a Markdown article inside the blog folder.</a>
         </li>
       </ol>
     </section>
