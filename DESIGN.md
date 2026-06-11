@@ -13,9 +13,9 @@ article titles and dates.
   every page.
 - **Soft Black**: `rgb(22, 22, 22)`. Use for navigation, dates, metadata,
   labels, headings, links, body copy, and other interface elements.
-- **Main Blue**: `rgb(0, 55, 162)`. Reserve for the timeline rail,
-  endpoint markers, directional arrow, button borders, and keyboard focus
-  outlines. Do not use it for broad surface fills.
+- **Main Blue**: `rgb(104, 106, 168)`. Reserve for the timeline rail,
+  endpoint markers, directional arrow, button hover shadows, and keyboard focus
+  outlines. Do not use it for broad surface fills or resting button fills.
 
 The active palette is Warm Ivory, Soft Black, and Main Blue. All text and
 interactive states must meet WCAG AA contrast requirements.
@@ -56,10 +56,11 @@ moving surrounding content.
 ### Read article button
 
 Every timeline entry includes a pill-shaped "Read article" link beside its title.
-The button uses translucent Warm Ivory, a partially transparent Main Blue border,
-Soft Black text, subtle inner light, and restrained backdrop blur. It may become
-more opaque on hover, but its label must remain readable without depending on
-the glass effect.
+The button is transparent at rest, with Soft Black text, a subtle white edge,
+inner light, and restrained backdrop blur. On hover, a Main Blue shadow appears
+below the button and the pill lifts slightly. Main Blue must not appear as a
+resting fill or border. The label must remain readable without depending on the
+glass effect.
 
 ## Motion
 
