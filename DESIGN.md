@@ -13,14 +13,15 @@ article titles and dates.
   every page.
 - **Soft Black**: `rgb(22, 22, 22)`. Use for navigation, dates, metadata,
   labels, headings, links, body copy, and other interface elements.
-- **Main Blue**: `rgb(104, 106, 168)`. Reserve for the timeline rail,
-  endpoint markers, directional arrow, button hover shadows, and keyboard focus
-  outlines. Do not use it for broad surface fills or resting button fills.
-- **Main Green**: `rgb(80, 110, 95)`
+- **Main Blue**: `rgb(104, 106, 168)`. Reserve for button hover shadows and
+  keyboard focus outlines. Do not use it for broad surface fills or resting
+  button fills.
+- **Main Green**: `rgb(80, 110, 95)`. Use for the timeline rail, endpoint
+  markers, and directional arrow.
 
 
-The active palette is Warm Ivory, Soft Black, and Main Blue. All text and
-interactive states must meet WCAG AA contrast requirements.
+The active palette is Warm Ivory, Soft Black, Main Blue, and Main Green. All
+text and interactive states must meet WCAG AA contrast requirements.
 
 ## Typography
 
@@ -42,9 +43,9 @@ hierarchy through size, weight, spacing, and alignment.
 ### Timeline rail
 
 A vertical line with endpoint markers and persistent Present and Past labels.
-The line, markers, and directional arrow use Main Blue. The labels use Soft
+The line, markers, and directional arrow use Main Green. The labels use Soft
 Black and communicate reading direction without relying on color. The Present
-marker is filled Main Blue; the Past marker is hollow. On desktop, the rail is
+marker is filled Main Green; the Past marker is hollow. On desktop, the rail is
 sticky and sized to the viewport. On mobile, it becomes a horizontal guide.
 
 ### Time group

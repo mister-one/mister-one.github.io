@@ -2,6 +2,7 @@
   --color-background: rgb(250, 249, 241);
   --color-soft-black: rgb(22, 22, 22);
   --color-main-blue: rgb(104, 106, 168);
+  --color-main-green: rgb(80, 110, 95);
 }
 
 body {
@@ -83,8 +84,8 @@ img {
   margin: 16px 7px;
   background: repeating-linear-gradient(
     to bottom,
-    var(--color-main-blue) 0,
-    var(--color-main-blue) 5px,
+    var(--color-main-green) 0,
+    var(--color-main-green) 5px,
     transparent 5px,
     transparent 9px
   );
@@ -97,8 +98,8 @@ img {
   left: -4px;
   width: 8px;
   height: 8px;
-  border-right: 2px solid var(--color-main-blue);
-  border-bottom: 2px solid var(--color-main-blue);
+  border-right: 2px solid var(--color-main-green);
+  border-bottom: 2px solid var(--color-main-green);
   transform: rotate(45deg);
 }
 
@@ -115,13 +116,13 @@ img {
   width: 12px;
   height: 12px;
   box-sizing: border-box;
-  border: 2px solid var(--color-main-blue);
+  border: 2px solid var(--color-main-green);
   border-radius: 50%;
   background: var(--color-background);
 }
 
 .timeline-direction-present::after {
-  background: var(--color-main-blue);
+  background: var(--color-main-green);
 }
 
 .timeline-direction-past::after {
@@ -324,8 +325,8 @@ img {
     margin: 0 16px;
     background: repeating-linear-gradient(
       to right,
-      var(--color-main-blue) 0,
-      var(--color-main-blue) 5px,
+      var(--color-main-green) 0,
+      var(--color-main-green) 5px,
       transparent 5px,
       transparent 9px
     );
