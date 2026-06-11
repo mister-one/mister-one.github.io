@@ -25,3 +25,68 @@ img {
   height: auto;
   border-radius: 8px;
 }
+
+.article-date {
+  margin-top: -12px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.blog-timeline {
+  position: relative;
+  margin-top: 32px;
+  padding-left: 28px;
+}
+
+.blog-timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 5px;
+  width: 2px;
+  background: #ddd;
+}
+
+.timeline-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  padding-bottom: 28px;
+}
+
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -28px;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border: 3px solid #222;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.timeline-entry:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-entry time {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.timeline-entry a {
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .timeline-entry {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

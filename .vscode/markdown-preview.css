@@ -1,0 +1,30 @@
+body,
+.vscode-body,
+.markdown-body {
+  background: #ffffff !important;
+  color: #151515 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+blockquote,
+td,
+th {
+  color: #151515 !important;
+}
+
+a {
+  color: #0969da !important;
+}
+
+code,
+pre {
+  background: #f6f8fa !important;
+  color: #24292f !important;
+}
