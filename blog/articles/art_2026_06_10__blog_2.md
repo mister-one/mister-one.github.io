@@ -3,6 +3,8 @@ layout: default
 title: Blog 2
 permalink: /blog/blog-2/
 date: 2026-06-10
+categories:
+  - Systems
 ---
 
 # Blog 2

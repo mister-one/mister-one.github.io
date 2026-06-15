@@ -3,6 +3,8 @@ layout: default
 title: Blog 3
 permalink: /blog/blog-3/
 date: 2026-06-09
+categories:
+  - Design
 ---
 
 # Blog 3

@@ -5,6 +5,6 @@ title: Home
 
 # Welcome
 
-This is my GitHub Pages website.
+Keeping track of intresting stuff...
 
 Go to the [blog]({{ '/blog/' | relative_url }}).
