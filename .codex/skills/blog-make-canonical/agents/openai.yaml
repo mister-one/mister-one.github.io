@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blog Make Canonical"
+  short_description: "Transform blog drafts into a canonical layered structure."
+  default_prompt: "Transform this blog article into the canonical layered blog structure."
