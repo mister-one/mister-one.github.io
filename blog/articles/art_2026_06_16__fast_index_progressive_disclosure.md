@@ -10,6 +10,8 @@ categories:
 
 # Fast Index and Progressive Disclosure
 
+![Window example]({{ '/assets/images/chart-progressive-disclosure-cost.png' | relative_url }})
+
 ## Spark
 
 Agents need to move quickly, but real-world answers are rarely simple.
