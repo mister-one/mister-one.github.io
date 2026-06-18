@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Human Websites Persuade. Agent Websites Let Things Happen.
+title: Fast Index and Progressive Disclosure
 permalink: /blog/art_2026_06_16__fast_index_progressive_disclosure/
 date: 2026-06-16
 categories:
@@ -9,6 +9,8 @@ categories:
 
 
 # Fast Index and Progressive Disclosure
+
+![Window example]({{ '/assets/images/chart-progressive-disclosure-cost.png' | relative_url }})
 
 ## Spark
 
